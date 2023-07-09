@@ -11,7 +11,6 @@ int main(int argc, char *argv[]) {
   for (int j = 1; j < argc; j++){
     int match = 1, popc = 0;
     int len = strlen(argv[j]);
-    bool MisM = false;
     for(i=0; i<len; i++){
       switch(argv[j][i]){
         case '[':
@@ -24,7 +23,6 @@ int main(int argc, char *argv[]) {
           close++;
           if (s.isEmpty()) {
             match = 0;
-            MisM = true;
             break;
           }
           c=s.pop();
@@ -34,7 +32,6 @@ int main(int argc, char *argv[]) {
           close++;
           if (s.isEmpty()) {
             match = 0;
-            MisM = true;
             break;
           }
           c=s.pop();
@@ -44,7 +41,6 @@ int main(int argc, char *argv[]) {
           close++;
           if (s.isEmpty()) {
             match = 0;
-            MisM = true;
             break;
           }
           c=s.pop();
